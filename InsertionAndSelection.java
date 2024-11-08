@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 public class InsertionAndSelection {
     public static void main(String[] args) {
@@ -6,6 +7,8 @@ public class InsertionAndSelection {
         Integer[] arr = genRandomArray();
         insertionSort(list);
         selectionSort(arr);
+
+
     }
 
     public static ArrayList<Integer> genRandomList() {
@@ -62,5 +65,9 @@ public class InsertionAndSelection {
             a[index1] = a[index2];
             a[index2] = temp;
         }
+    }
+
+    public static void print(ArrayList<Integer> a, Comparable<Integer> b[], String msg) throws Exception {
+        BufferedWriter writer = new BufferedWriter('output.txt');
     }
 }
