@@ -1,5 +1,3 @@
-package mainPackage;
-
 /**
 * Names:	   Jackson P, Maya T
 * Date: 	   NOV2024
@@ -9,6 +7,9 @@ package mainPackage;
 * 			   integers and array of 100 random integers 
 * 			   into a new text file
 */
+
+package mainPackage;
+
 import java.util.*;
 import java.io.*;
 
@@ -95,22 +96,6 @@ public class InsertionAndSelection
     }
 
     /**
-    * helper to slection sort
-    * @param a
-    * @param index1
-    * @param index2
-    */
-    private static void swapArray(Comparable<Integer>[] a, int index1, int index2) 
-    {
-        if(index2 < 100) 
-        {
-            Comparable<Integer> temp = a[index1];
-            a[index1] = a[index2];
-            a[index2] = temp;
-        }
-    }
-
-    /**
     * prints list and array before and after sorts into new
     * text file
     * @param a
@@ -128,6 +113,7 @@ public class InsertionAndSelection
         {
             fw.write(a.get(i).toString() + ", ");
             if ((i + 1) % 10 == 0) fw.write("\n");
+            if (i == 99) fw.write(".");
         }
     
         fw.write("\n");
@@ -136,9 +122,26 @@ public class InsertionAndSelection
         {
             fw.write(b[i].toString() + ", ");
             if ((i + 1) % 10 == 0) fw.write("\n");
+            if (i == 99) fw.write(".");
         }
     
         fw.write("\n\n");
         fw.close();
+    }
+
+   /**
+    * helper to slection sort
+    * @param a
+    * @param index1
+    * @param index2
+    */
+    private static void swapArray(Comparable<Integer>[] a, int index1, int index2) 
+    {
+        if(index2 < 100) 
+        {
+            Comparable<Integer> temp = a[index1];
+            a[index1] = a[index2];
+            a[index2] = temp;
+        }
     }
 }
