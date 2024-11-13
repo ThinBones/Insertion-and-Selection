@@ -8,7 +8,7 @@
 * 			   into a new text file
 */
 
-package mainPackage;
+package mainpackage;
 
 import java.util.*;
 import java.io.*;
@@ -111,18 +111,18 @@ public class InsertionAndSelection
     
         for (int i = 0; i < a.size(); i++) 
         {
-            fw.write(a.get(i).toString() + ", ");
+            if (i == 99) fw.write(a.get(i).toString() + ".");
+            else fw.write(a.get(i).toString() + ", ");
             if ((i + 1) % 10 == 0) fw.write("\n");
-            if (i == 99) fw.write(".");
         }
     
         fw.write("\n");
     
         for (int i = 0; i < b.length; i++) 
         {
-            fw.write(b[i].toString() + ", ");
+            if (i == 99) fw.write(b[i].toString() + ".");
+            else fw.write(b[i].toString() + ", ");
             if ((i + 1) % 10 == 0) fw.write("\n");
-            if (i == 99) fw.write(".");
         }
     
         fw.write("\n\n");
